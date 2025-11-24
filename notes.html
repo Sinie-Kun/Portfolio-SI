@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Notes de cours - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="rubrique-page">
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropdown-toggle">Découvrir ▼</button>
+            <ul class="submenu">
+                <li><a href="travaux.html">Rubrique 1 : Mes Travaux</a></li>
+                <li><a href="notes.html">Rubrique 2 : Mes Notes de cours</a></li>
+                <li><a href="certifications.html">Rubrique 3 : Mes Certifications</a></li>
+                <li><a href="projet_final.html">Rubrique 4 : Projet Final</a></li>
+                <li><a href="diaporama.html">Rubrique 5 : Diaporama de Soutenance</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="rubrique-content">
+        <div class="rubrique-hero">
+            <h1>Mes Notes de cours</h1>
+            <p>Tous les supports de cours, synthèses et fiches de révision.</p>
+        </div>
+
+        <section style="max-width: 900px; margin: 0 auto;">
+            <article class="seance-card">
+                <div class="documents-list">
+                    <div class="document">
+                        <img src="img/pdf-icon.png" alt="PDF" class="icon">
+                        <a href="documents/TD1_prise_de_notes.pdf" target="_blank">Notes du TD1 (PDF)</a>
+                    </div>
+                    <div class="document">
+                        <img src="img/pdf-icon.png" alt="PDF" class="icon">
+                        <a href="documents/Odoo_présentation_note.pdf" target="_blank">Présentation de Odoo (PDF)</a>
+                    </div>
+                    <div class="document">
+                        <img src="img/pdf-icon.png" alt="PDF" class="icon">
+                        <a href="documents/SI-Cours2-processus-gestion.pdf" target="_blank">Processus de gestion et de modélisation (PDF)</a>
+                    </div>
+                    <div class="document">
+                        <img src="img/pdf-icon.png" alt="PDF" class="icon">
+                        <a href="documents/Cours-3-leslivrables.pdf" target="_blank">Les livrables (PDF)</a>
+                    </div>
+                    <div class="document">
+                        <img src="img/pdf-icon.png" alt="PDF" class="icon">
+                        <a href="documents/Cours3-diagramme-de-cas-d'utilisation.pdf" target="_blank">Diagramme de cas d'utilisation (PDF)</a>
+                    </div>
+                    <div class="document">
+                        <img src="img/pdf-icon.png" alt="PDF" class="icon">
+                        <a href="documents/Cours-gestion-de-projet.pdf" target="_blank">Cours - Gestion de projet (PDF)</a>
+                    </div>
+                    <div class="document">
+                        <img src="img/pdf-icon.png" alt="PDF" class="icon">
+                        <a href="documents/Systèmes d'information CM1_notes.pdf" target="_blank">Synthèse CM1 - Systèmes d'information (PDF)</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - Portfolio | Réalisé par Jorys Kancel</p>
+    </footer>
+
+    <script>
+        const dropdown = document.querySelector('.dropdown');
+        const toggleBtn = document.querySelector('.dropdown-toggle');
+
+        toggleBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!dropdown.contains(event.target) && dropdown.classList.contains('open')) {
+                dropdown.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
